@@ -70,10 +70,21 @@ final class ViewController: UIViewController {
         button.backgroundColor = color
         button.addTarget(self, action: #selector(noteTapped), for: .touchUpInside)
         button.layer.cornerRadius = 10
+        button.alpha = 1.0
         return button
     }
     
     @objc func noteTapped(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.2) {
+                    sender.alpha = 0.5
+                }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    UIView.animate(withDuration: 0.1) {
+                        sender.alpha = 1.0
+                    }
+                }
+        
         if let note = sender.titleLabel?.text {
             playSound(note: note)
         }

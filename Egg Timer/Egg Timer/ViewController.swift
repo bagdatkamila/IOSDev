@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     }
     
     func setupUI() {
-        view.backgroundColor = .white
+        view.backgroundColor = .red
         
         softEggImageView.isUserInteractionEnabled = true
         mediumEggImageView.isUserInteractionEnabled = true
@@ -74,20 +74,23 @@ class ViewController: UIViewController {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         timeLabel.translatesAutoresizingMaskIntoConstraints = false
         
+        
+        
         NSLayoutConstraint.activate([
             stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -100),
+            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -150), // Измени смещение по Y
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             
-            timeLabel.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 20),
+            timeLabel.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 50), // Увеличь отступ
             timeLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            progressBar.topAnchor.constraint(equalTo: timeLabel.bottomAnchor, constant: 20),
+            progressBar.topAnchor.constraint(equalTo: timeLabel.bottomAnchor, constant: 30), // Увеличь отступ
             progressBar.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             progressBar.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             progressBar.heightAnchor.constraint(equalToConstant: 10)
         ])
+
     }
     
     @objc func eggTapped(_ sender: UITapGestureRecognizer) {

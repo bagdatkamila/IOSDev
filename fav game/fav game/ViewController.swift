@@ -43,7 +43,7 @@ class ViewController: UIViewController, UITableViewDataSource {
 
     ]
     
-    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

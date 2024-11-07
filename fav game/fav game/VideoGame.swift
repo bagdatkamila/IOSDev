@@ -9,10 +9,10 @@ import UIKit
 
 class VideoGame: UITableViewCell {
     
-    @IBOutlet private weak var coverImage: UIImageView!
-    @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var platformLabel: UILabel!
-    @IBOutlet private weak var releaseLabel: UILabel!
+    @IBOutlet weak var coverImage: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var platformLabel: UILabel!
+    @IBOutlet weak var releaseLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

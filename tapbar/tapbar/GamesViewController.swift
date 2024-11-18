@@ -69,7 +69,7 @@ class GamesViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(GamesTableViewCell.self, forCellReuseIdentifier: "gamesTableViewCell")
+        tableView.register(GamesTableViewCell.self, forCellReuseIdentifier: "GamesTableViewCell")
         tableView.dataSource = self
         tableView.delegate = self
     }
@@ -101,8 +101,9 @@ extension GamesViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "gamesTableViewCell", for: indexPath) as! GamesTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "GamesTableViewCell", for: indexPath) as! GamesTableViewCell
         let currentModel = games[indexPath.row]
+        print(currentModel)
         cell.configure(currentModel)
         return cell
     }

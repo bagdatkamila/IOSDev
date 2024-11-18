@@ -23,6 +23,7 @@ class Movie2ViewController: UIViewController {
     }
     
     func configure(with model: Movie?) {
+        print(123)
         self.inputModel = model
     }
 }

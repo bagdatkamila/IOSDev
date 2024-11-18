@@ -27,8 +27,10 @@ class MovieViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(MovieTableViewCell.self, forCellReuseIdentifier: "movieTableViewCell")
+//        tableView.register(MovieTableViewCell.self, forCellReuseIdentifier: "MovieTableViewCell")
 //        tableView.register(UINib(nibName: "MovieTableViewCell", bundle: nil), forCellReuseIdentifier: "MovieTableViewCell")
+        
+        tableView.register(UINib(nibName: "MovieTableViewCellTest", bundle: nil), forCellReuseIdentifier: "MovieTableViewCellTest")
         tableView.dataSource = self
         tableView.delegate = self
     }
@@ -56,13 +58,13 @@ extension MovieViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 100
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "movieTableViewCell", for: indexPath) as! MovieTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCellTest", for: indexPath) as! MovieTableViewCellTest
         let currentModel = movies[indexPath.row]
-        cell.configure(currentModel)
+        cell.configure(with: currentModel)
         return cell
     }
 }

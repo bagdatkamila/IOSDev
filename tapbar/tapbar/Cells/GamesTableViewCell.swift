@@ -20,6 +20,7 @@ class GamesTableViewCell: UITableViewCell {
         print("Configuring with title: \(model.title)")
         print("titleLabel is nil: \(titleLabel == nil)")
         print("coverImage is nil: \(coverImage == nil)")
+        print(model)
         titleLabel?.text = model.title
         coverImage?.image = model.image
     }

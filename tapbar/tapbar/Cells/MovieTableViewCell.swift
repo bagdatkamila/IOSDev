@@ -16,6 +16,7 @@ class MovieTableViewCell: UITableViewCell {
     }
     
     func configure(_ model: Movie){
+        print(123)
         titleLabel?.text = model.title
         coverImage?.image = model.image
     }

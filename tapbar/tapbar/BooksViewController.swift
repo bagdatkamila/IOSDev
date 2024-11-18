@@ -10,7 +10,7 @@ import UIKit
 class BooksViewController: UIViewController {
     
     private var books: [Books] = [
-        Books(title: "To Kill a Mockingbird", image: .init(named: "toKill")!, description: "A powerful novel by Harper Lee that explores themes of racial injustice and moral growth in the American South, as seen through the eyes of young Scout Finch."),
+        Books(title: "To Kill a Mockingbird", image: .toKill, description: "A powerful novel by Harper Lee that explores themes of racial injustice and moral growth in the American South, as seen through the eyes of young Scout Finch."),
         Books(title: "1984", image: ._1984, description: "George Orwell’s dystopian classic depicting a totalitarian society under constant surveillance, where independent thought is crushed, and truth is manipulated."),
         Books(title: "Pride and Prejudice", image: .pride, description: "Jane Austen’s beloved romantic novel following Elizabeth Bennet as she navigates love, class, and family expectations in 19th-century England."),
         Books(title: "The Great Gatsby", image: .gatsby, description: "F. Scott Fitzgerald’s iconic story of love, wealth, and the American Dream set in the Roaring Twenties, centered around the mysterious millionaire Jay Gatsby and his obsession with Daisy Buchanan."),
